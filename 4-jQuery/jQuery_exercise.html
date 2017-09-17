@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    
+   
+    <!--//jQuery UI setup-->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!--End of jQuery ui setup-->
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery Exercise</title>
+
+    
+    <style type="text/css">
+        
+        body {
+            font-family: sans-serif;
+            padding: 0; margin: 0;
+        }
+        
+        #header {
+            width: 100%; 
+            background-color: #EEEEEE; 
+            padding: 6px; 
+            height: 30px;
+        }
+        
+        #logo {
+            float: left;
+            font-weight: bolder;
+            font-size: 130%;
+            padding-top: 2px;
+        }
+        
+        #buttonContainer {
+            width: 214px; 
+            margin: 0 auto;
+        }
+        
+        .toggleButton {
+            float: left; 
+            border: 1px solid gray;
+            padding: 4px; 
+            border-right: none; 
+            font-size: 90%;
+        } 
+        
+        #HTML {
+            border-top-left-radius: 5px; 
+            border-bottom-left-radius: 5px;
+        }
+        
+        #output {
+            border-top-right-radius: 5px; 
+            border-bottom-right-radius: 5px;
+            border-right: 1px solid gray;
+        }
+        
+        .active {
+            
+            background-color: #E8F2FF;
+            
+        }
+        
+        
+        .highlightedButton {
+            
+         background-color: lightgrey;   
+            
+        }
+        
+    </style>
+    
+</head>
+    
+    <body>
+      
+        
+        <div id="header">
+            <div id="logo">CodePlayer</div>
+                <div id="buttonContainer">
+                    <div class="toggleButton active" id="HTML">HTML</div>
+                    <div class="toggleButton" id="CSS">CSS</div>
+                    <div class="toggleButton" id ="javascript">Javascript</div>
+                    <div class="toggleButton active" id="output">Output</div>
+                </div>
+
+        </div>
+        
+        
+        
+      
+        <script type="text/javascript">
+
+            
+            $(".toggleButton").hover(function() {
+                
+              $(this).addClass("highlightedButton");  
+                
+            }, function() {
+                
+                $(this).removeClass("highlightedButton"); // this HandleOut function changes the bg color when hovered out. Since the color is not HARDCODED HERE, it's much better!
+                
+            });
+            
+        </script>
+    
+    </body>
+</html>

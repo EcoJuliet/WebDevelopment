@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>IF Statements!</title>
+    <style type="text/css"></style>
+</head>
+<body>
+
+    <p> What is the magic word?</p>
+    
+    <input id="magicWord" type="text"> <!--Box!-->
+    
+    <button id="button"> Click me! </button>
+    
+    <script type="text/javascript">
+            
+        document.getElementById("button").onclick = function() { /*On button click...*/
+            
+            var magicWordInput = document.getElementById("magicWord").value; /*Creates a variable magicWordInput to get the value inserted in the box.*/
+            
+            /*The ID is in ""!*/
+            
+            var magicWord = "abacadabra";
+            
+            if (magicWordInput == magicWord) {
+                
+                alert("You got it!");
+                
+            } else {
+                
+                alert("Wrong!");
+                
+            }
+            
+        }
+    </script>
+</body>
+
+
+
+</html>

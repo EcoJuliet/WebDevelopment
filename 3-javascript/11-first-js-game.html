@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <title> My first JS game!!</title>
+        <style type="text/css">
+        
+            
+            body {
+                
+                margin: 0 auto;
+                max-width: 600px;
+                
+            }
+        
+            #game1 {
+                background-color: aquamarine;
+                padding: center;
+                width: 400px;
+            }
+            
+            #game2 {
+                
+                
+                background-color: dodgerblue;
+                padding: center;
+                width: 400px;
+                
+            }
+        </style>
+        
+    </head>
+    <body>
+        <p>For this script I'm going to make my first JS game!</p>
+        <p>To make this game, we'll need some things:</p>
+            <ol>
+                <li>A random number generator;</li>
+                <li>A text asking "HOW MANY FINGERS ARE LIFTED?</li>
+                <li>A field where the user can input the amount of fingers.</li>
+                <li>A button to receive the action on the field.</li>
+                <li>An alert that says wether the user is right or wrong.</li>
+            </ol>
+        
+         <hr>
+        
+                <h1> Let's begin!</h1>
+        <div id="game1">        
+
+            <h2> GAME 1 </h2>
+                <p> How many fingers am I holding up? (0-5)</p>
+                <input type="text" id="inputBox">
+                <button id="leButton">Click me!</button>
+            </div>
+        
+            <hr>
+            <div id="game2">
+                
+                <h2> GAME 2 </h2>
+                <p> How many fingers am I holding up? (0-5)</p>
+                <input type="text" id="inputBox2">
+                <button id="leButton2">No, click me motherfucker!</button>
+
+            </div>
+        
+        <script type="text/javascript">
+            
+            
+            /*CODE FOR GAME 1*/
+            
+            document.getElementById("leButton").onclick = function() {
+                
+                var randomNum = Math.random();
+                
+                    randomNum = randomNum * 6;
+                    randomNum = Math.floor(randomNum);
+
+                var userNum = document.getElementById("inputBox").value;
+                
+                if (userNum == randomNum) {
+                    
+                    alert("Correct!");
+                    
+                } else { 
+                    
+                    alert("No, the number was "+ randomNum);   
+                    
+                }
+                
+                }
+
+            /*CODE FOR GAME 2*/
+
+            /*FUNCTION TO GET THE SEXY NUMBER!*/   
+            var randomNumber = Math.random();
+                randomNumber = randomNumber * 6;
+                randomNumber = Math.floor(randomNumber);
+            
+
+            document.getElementById("leButton2").onclick = function() {
+                
+            var userNumber = document.getElementById("inputBox2").value;
+                
+            if (userNumber < randomNumber) {
+                
+                alert ("Your guess is too low! Try again!");
+            }
+            if (userNumber > randomNumber) {
+                
+                alert ("Your guess is too high! Try again!");
+            }
+            if (userNumber == randomNumber) {
+                
+                alert ("YAAAAAS MOTHER FUCKER!!!!");
+                
+            }
+                
+            }
+            
+        
+        </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    
+   
+    <!--//jQuery UI setup-->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!--End of jQuery ui setup-->
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Accordian and Sortables</title>
+
+    
+    <style type="text/css">
+        
+            #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+            #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+            #sortable li span { position: absolute; margin-left: -1.3em; }
+        
+        
+    </style>
+    
+</head>
+    
+    <body>
+      
+        <h2> Accordion</h2>
+        <div id="accordion">
+        <h3>Título 1</h3>
+        <div><p>LALALALALALALALALALALALAALALLAALALALLALALALALLALALALALALASDASD ASHDUHASOIDHASODIUHASIDOUHASOIDUHASIODUHAIsoudhIOUASHdIOAUShd aUISDhOIAUShdOIAUSdhiOAUShdOIAUShdOIUAShdAS dUIAHSdOIUAShdoIAUShdIOAUShdOIAUShdIOAUShd IUAHSdoiUAHSdioUAHSdoiUHSdoiUHASDoiUHASdoIUAHSdoIUHASdoiUAHSd</p></div>
+        
+        <h3>Título 2</h3>
+        <div><p>AHsidouhoIASUhdOIAUShdIOAUShd UASHdOIAUShdoiUSHDOIA sdIUAShdOIUAhsd IOAUShdOIUAShdOIAUShd IOAUShdOIAUShdIOASu dHIOASudhAOISudh oiduHASdoiuhA sdoIUAHSdoiUA SdiUAHSdioUAHSdoI ShdioUShd OIUAHSdoi</p></div>
+        
+        <h3> Título 3</h3>
+        <div><p>AHSdiuhAOSIduhAIOSD HASidouhAsd UIAHSdioUA SdioU AshdioU shdIOUAS hdioUshdoiUA shdioUA shdioAU shdiuasd</p></div>
+        </div>
+        
+        <hr/>
+        <h2>Sortable List</h2>
+        
+        
+        
+        <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Seguno item</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Tarceio item</li>       
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Brimero item</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Kuarto item</li>
+        
+        
+        </ul>
+        
+        <script type="text/javascript">
+                $( "#accordion").accordion();
+                $("#sortable").sortable();
+                $("#sortable").disableSelection();
+            
+            
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Changing website content</title>
+    </head>
+
+    <body> 
+        <div id="hideHere">
+        
+        <p id="hi">Hello World!</p>
+            
+            <button id="button">Change text</button>
+        
+        <p id="secondParagraph">Javascript is ...</p>
+        
+            <button id="secondButton">This is the second button!</button>
+        
+        <p id="emptyParagraph"></p>
+        
+            <button id="createParagraph">Create some text!</button>
+        
+        <p id="moreText"> This is some text :)</p>
+        
+            <button id="styleText">Change mah style!</button>
+        
+        <button id="hidyHider"> Hide everything and rund!!</button>
+      </div>  
+<script type="text/javascript">
+    
+    document.getElementById("button").onclick = function() { // This is a JS function!
+        // This function inside the function will change the "Hello World" to "Hello Eros" when we click the button!
+        document.getElementById("hi").innerHTML = "Hello Eros"; // ACTION.  
+        
+    }
+    
+    
+    document.getElementById("secondButton").onclick = function() {
+       // x = X + 1!!
+        document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById("secondParagraph").innerHTML + "awesome!!";
+    }
+    
+    document.getElementById("createParagraph").onclick = function() {
+        // I can make text appear out of "thin air" by appending to an empty paragraph.
+        // Note that I can use HTML tags here that they woooork :)
+        document.getElementById("emptyParagraph").innerHTML = "<h1>I like banaaaaaanaaaaaaaaas!</h1>";
+        
+    }
+    
+    // I CAN ALSO CHANGE STYLESSSS
+    document.getElementById("styleText").onclick = function() {
+        
+        document.getElementById("moreText").style.color = "red";
+    document.getElementById("moreText").style.fontSize = "50px";   /* OOOH CHANGING FONT SIZEEE!!*/   
+    }
+    
+    document.getElementById("hidyHider").onclick = function() {
+        // makes everything disappear. LOL
+        document.getElementById("hideHere").style.display = "none";
+        
+    }
+    
+    
+    
+    
+    
+</script>
+    </body>
+</html>

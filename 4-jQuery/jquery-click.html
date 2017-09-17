@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title> jQuery</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    This enables the embed jQuery script from Google to be used on my page!-->
+    
+    <script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+    
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+            position: relative;
+            float: left;
+            margin: 1rem;
+
+        }
+        .squares {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            float: left;
+            margin: 1rem;
+            
+        }
+        #square1 { 
+            background-color: red;
+            
+        }
+        
+        #square2 {
+            background-color: red;
+            position: relative;
+        }
+    
+    </style>
+    
+</head>
+    
+<body>
+    <p> I can use jQuery from either the Google API or downloaded on my system.</p>
+    
+
+    
+    <div id="circle"></div>
+    <div class="squares" id="square1"></div>
+    <div class="squares" id="square2"></div>
+    
+    <script type="text/javascript">
+    
+    // detecting jQuery     
+/*    if (typeof jQuery == "undefined") {
+        
+        alert("jQuery is NOT installed");
+        
+    } else {
+        
+        alert("jQuery is here");
+        
+    }
+        */
+    </script>
+    
+    <script type="text/javascript">
+        //To use jQuery  use $
+    //To get an element in jQuery
+    $(".squares").click(function() {
+        
+        alert("A square was clicked");
+        
+    })
+        
+    </script>
+    
+</body>
+</html>

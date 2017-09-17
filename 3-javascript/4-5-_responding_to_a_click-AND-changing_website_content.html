@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Changing website content</title>
+    </head>
+
+    <body> 
+        
+        <p id="hi">Hello World!</p>
+            
+            <button id="button">Change text</button>
+        
+        <p id="secondParagraph">Javascript is ...</p>
+        
+            <button id="secondButton">This is the second button!</button>
+        
+        <p id="emptyParagraph"></p>
+        
+            <button id="createParagraph">Create some text!</button>
+<script type="text/javascript">
+    
+    document.getElementById("button").onclick = function() { // This is a JS function!
+        // This function inside the function will change the "Hello World" to "Hello Eros" when we click the button!
+        document.getElementById("hi").innerHTML = "Hello Eros"; // ACTION.  
+        
+    }
+    
+    
+    document.getElementById("secondButton").onclick = function() {
+       // x = X + 1!!
+        document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById("secondParagraph").innerHTML + "awesome!!";
+    }
+    
+    document.getElementById("createParagraph").onclick = function() {
+        // I can make text appear out of "thin air" by appending to an empty paragraph.
+        // Note that I can use HTML tags here that they woooork :)
+        document.getElementById("emptyParagraph").innerHTML = "<h1>I like banaaaaaanaaaaaaaaas!</h1>";
+        
+    }
+    
+    
+    
+</script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    
+   
+    <!--//jQuery UI setup-->
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!--End of jQuery ui setup-->
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Droppables</title>
+
+    
+    <style type="text/css">
+        .box {
+            
+            width: 100px; 
+            height: 100px; 
+            padding: 0.5em; 
+            background-color: aquamarine;
+            border: 1px black solid;
+            border-radius: 10%;
+            margin: 10px 10px; 
+            
+        } 
+        #vertical { 
+
+
+        }
+        #vertical:hover { 
+            background-color: dodgerblue;
+        } 
+        
+        #horizontal:hover { 
+            background-color: darkblue;
+        } 
+        
+        .text {
+            text-align: center;
+
+        }
+        
+        #contentBox {
+            
+            width: 300px;
+            height:300px;
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        
+        h4 {
+            margin: 0 50px;
+            background-color: gray;
+            
+        }
+        
+    </style>
+    
+</head>
+    
+    <body>
+        
+        <!--DRAGGABLES-->
+        
+        <div id="contentBox" class="ui-widget-header"><p>Drop here</p></div>
+
+            <div id="smallBox" class="ui=widget-content box text">
+                <span>Small Box</span>
+            </div>
+ 
+       
+
+        
+        <script type="text/javascript">
+            $( function() {
+
+                $( "#smallBox").draggable();
+                $ ("#contentBox").droppable({
+                    drop: function (event, ui) { // callback function
+                   $(this)
+                       .addClass("ui-state-highlight") // changes color
+                       .find("p") // look for where it's written "Drop here"
+                        .html("Dropped") // changes text
+                }
+                
+                });
+
+            } );
+        
+        </script>
+    
+    </body>
+</html>

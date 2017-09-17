@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Reaction Tester</title>
+        <style type="text/css">
+            
+/*            .gameBlock {
+                
+                background:#1473e6;
+                border-radius:1rem;
+                border:.125rem solid transparent;
+                box-sizing:border-box;
+                cursor:pointer;
+                display:inline-block;
+                font-family:adobe-clean,Helvetica,Arial,sans-serif;
+                font-size:1rem;
+                font-weight:700;
+                line-height:1.75rem;
+                padding:0 .75rem .0625rem;
+                text-decoration:none;
+                transition:background 150ms ease-out 0s,border-color 150ms ease-out 0s,color 150ms ease-out 0s,box-shadow 150ms ease-out 0s;
+                vertical-align:top;
+                color:#fff
+            }*/
+                        
+            html {
+                
+                height: 100%;
+                display: flex;
+                
+            }
+            body {
+                
+                margin: auto;
+                
+            }
+            
+            #shape {
+                
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                display: none; /*the shape must start disappeared*/
+                
+                
+            }
+            
+
+        </style>    
+    </head>
+    <body> 
+        
+        <div clas="gameBlock">
+            <h1> Test your reactions!</h1>
+            <p> Click on the objects as fast as you can!</p>
+
+
+             <p>Your time: <span id="timeTaken"></span></p>
+
+            <div id="shape"></div> <!--disappearing red square!-->
+        </div>
+        
+        
+        
+<script type="text/javascript">
+    
+    // time must be measured on page load. IN MILISSECONDS.
+    
+    var start = new Date().getTime();
+    
+    //substract the time on-action from that one
+    
+    
+    
+    function makeShapeAppear() { // function to make the object APPEAR
+        
+            document.getElementById("shape").style.display = "block" // appear 
+        
+            start = new Date().getTime(); // update the timer when the shape appears. this start is in a local scope :)
+      
+
+            
+    }
+    
+    function appearAfterDelay() {
+        
+                
+            setTimeout(makeShapeAppear, Math.random() * 2000); // the randomizer
+        
+    }
+    
+    appearAfterDelay(); // calling the function
+    
+    document.getElementById("shape").onclick = function() {
+        
+        var end = new Date().getTime(); // substracting the time of the action;
+       
+        var timeTaken = (end - start) / 1000;  // in seconds
+        
+        document.getElementById("timeTaken").innerHTML = timeTaken + "s"; // time taken
+        document.getElementById("shape").style.display = "none"; //disappear
+        
+        appearAfterDelay(); // calling the function again!
+        
+    } 
+    
+    
+    
+</script>        
+        
+    </body>
+</html>

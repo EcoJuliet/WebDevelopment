@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <title> jQuery</title>
+   
+    <script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+    
+          #circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+            padding: 1px;
+           
+                  
+              }
+        
+            .square {
+                
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 2px;
+                
+        }
+        
+        #clickMe {
+            
+            font-weight: bolder;
+        }
+        
+        #hidden {
+            
+            display: none;
+        }
+                  
+    </style>
+    
+</head>
+    
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    
+    
+<p id="mustFadeOut"> I can change the CSS style of an object, using only: <br>
+    
+    $(object).css("css_atribute", "value");<br><br>
+    $(this).fadeOut(); -> Fade that shit!<br>
+    $(this).hide(); -> hide that shit! Same as setting the display to "none"<br>
+    
+    </p>
+    
+    <p> Now stop.<br>
+    Imagine you're discovering a new world. A world of wonders, of delight, of misteries.<br>
+    A world you couldn't even imagine in the past.<br>
+    Now it's standing right <span id="clickMe">here</span> in front of you.</p>
+    
+    <p id="hidden"> And the world just <em>appears</em> in front of you. Just. like. that.</p>
+    
+        <button id="button">Presz mi tu Fadeout!</button>
+    
+        <button id="toggleButton">Toggle</button>
+    
+    
+    <p id="togglePar"> This paragraph is TOGGLE paragraph. Am it here, am I gone?</p>
+
+    
+    <script type="text/javascript">
+
+/*       $("#circle").click(function() {
+           
+           $(this).fadeOut("Slow", function() {alert("FadeOut completed")});
+            // this is a callback function.  It only happens when FadeOut is completed.
+           //A good use for callbacks is when mining data from other pages. You must process it first, wait, then deal with it.
+           
+       });
+        */
+        
+        //Create a paragraph
+        //a button
+        //press button
+        //paragraph fadesOut.
+        
+ /*       $("#button").click(function() {
+            
+            $("#mustFadeOut").fadeOut("slow");
+            // once it fades, the display property is GONE
+            
+        })
+        
+        // Paragraph fadeIn
+        
+        $("#clickMe").click(function() {
+            
+            $("#hidden").fadeIn();
+            
+        })
+        */
+ /*       
+        $("#toggleButton").click(function() {
+            
+            $("#togglePar").toggle();   
+            
+        });*/
+        
+        // a Better (prettier!) way 
+        
+/*        $("#toggleButton").click(function() {
+            
+            if ($("#togglePar").css("display") == "none") {
+                
+                $("#togglePar").fadeIn();
+                
+            } else {
+                
+                $("#togglePar").fadeOut();
+                
+            }
+            
+            
+        });
+        */
+        
+        
+        var textDisplay = true;
+        
+        $("#toggleButton").hover(function() {
+        
+            if (textDisplay) {
+                
+                $("#togglePar").fadeOut(function() {textDisplay = false;});
+                
+            } else {
+                
+                $("#togglePar").fadeIn(function() {textDisplay = true;});
+                
+            }});
+        // using a variable to keep track of the change.
+        
+    </script>
+    
+</body>
+</html>

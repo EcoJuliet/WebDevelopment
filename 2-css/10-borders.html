@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<tittle style="color:red; font-size:200%;">CSS3</tittle>
+		<p style="color:#0174DF;font-size:150%;">Borders</p>
+			<style type="text/css">
+                #red_square {
+                    background-color: #621919;
+                    border: 2px red solid;
+                }
+                #blue_square {
+                    background-color: #0F3B3B;
+                    border-style: ridge dotted dashed solid;
+                    border-color: black blue mediumvioletred green;
+                    border-width: 2px 3px 4px 5px;
+                    
+                }
+                #green_square {
+                    background-color: #445B17;
+                    border-radius: 50px;
+                    border: 1px black solid;
+                }
+                .square {
+                    width: 100px;
+                    height: 100px;
+                    margin: 15px;
+                    float: left;
+                }
+                .borders {
+                    position: relative;
+                    float: right;
+                    
+                }
+			</style>
+
+	</head>
+	
+		<body>
+            <div id="red_square" class="square">
+
+            </div>
+            <div id="blue_square" class="square">
+
+            </div>
+            <div id="green_square" class="square">
+                         
+            </div>
+            <div class="borders">
+                <p>I can mix ids and classes in the same div, like in the squares above!</p>               
+                <p> Borders are added by using "Border" style. Three things bust be specified!</p>
+                    <ul>
+                        <li>width;</li>
+                        <li>color;</li>
+                        <li>style (solid or not).</li>
+                    </ul>
+                <p> Always remember to check the list of border styles</p>
+                <a href="https://www.w3schools.com/cssref/pr_border-style.asp"> This is a good source :)</a>
+                <p> 'border-radius' make borders fluffly :)</p>
+                <p> To make a circle, set the radius to HALF the width of the square :)</p>
+            </div>
+		</body>
+</html>

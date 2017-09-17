@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Arrays</title>
+        <style type="text/css"></style>    
+    </head>
+    <body> 
+        
+
+        <script type="text/javascript">
+            
+            var myArray = new Array();                          /*Now we have an empty array names myArray. use parenthesis because is a function!*/ 
+            
+            myArray[0] = "pizza";
+            myArray[1] = "chocolate";
+            
+            alert(myArray[1])                                   /*IT WORKS!*/
+            
+            
+            console.log(myArray)                                /*This is a way of sending messages to myself on the console!*/
+            console.log(myArray.length)                         /*The console outputs the lenght of the array.*/
+            
+                                                                /*There is a different way of creating an array:*/
+            
+            var food = ["pizza", "chocolate", "candy", "milk"]; /*This is an array named 'food', just like Python!*/
+            
+            food.push("bananas");                               /*Appends "BANANAS" to the list;*/
+            /*  food.splice(2, 2);  */                            /* deletes 2 items (x, 2) starting from index 2 (2, x)*/
+            /*  food.splice(1, 0, "sucrilhos");*/                 /*Adds on index 1, delete 0 items, add string*/
+            /*food.splice(1, 1, "oitavas");*/                           /* Replaces the index 1 item to "oitavas"*/
+            food.splice(1, 0, "bizarro", "cachorro");               /*Adds as many items as I want*/
+            
+            console.log(food);
+
+        </script>        
+        
+    </body>
+</html>

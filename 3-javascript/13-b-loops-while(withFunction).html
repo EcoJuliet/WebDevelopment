@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+    <head>
+    
+        <title>WHILE</title>
+        
+    <style type="text/css">
+        
+        body {
+            
+            margin: 0 auto;
+            max-width: 700px;
+            
+        }
+        
+        #background {
+            
+            background-color: aquamarine;
+            height: 800px;
+            padding-left: 200px;
+            border-radius: 25px;
+        
+        }
+        #leButton {
+            
+            padding: 5px 5px;
+            background-color:black;
+            color: white;
+            
+        }
+        #leButton2 {
+            
+            padding: 5px 5px;
+            background-color:black;
+            color: white; 
+            
+        }
+        #interactive {
+            
+            position: relative;
+            left: -100px;
+            margin: 50px 120px;
+            border: 1px solid aqua;
+            padding: 2px 0px 2px 5px;
+            
+        }
+        #interactive2 {
+
+            padding: 2px 0px 2px 5px;  
+            
+        }
+        #userInput2 {
+            
+            padding: 5px;
+            background-color: black;
+            color: white;
+            
+        }
+    </style>
+      
+    
+    
+    </head>
+    <body>
+        <div id="background">
+            
+            <h1> How many finger v2.0</h1>
+            <h2> Game 1</h2>
+
+            <ol>
+                <li>User INPUTS a number</li>
+                <li>JS reads the number</li>
+                <li>Tries to guess the number</li>
+                <li>How many guesses it took?</li>
+
+            </ol>
+                <div id="interactive">
+                    <p> How many finger are you holding up? (1-5)</p>    
+                    <input type=text id="userInput">
+                    <button id="leButton">Click me</button>
+                    <p></p>
+                </div>
+            
+            
+            <h2> Game 2</h2>
+
+            <ol>
+                <li>User SELECTS a number</li>
+                <li>JS reads the number</li>
+                <li>Tries to guess the number</li>
+                <li>How many guesses it took?</li>
+
+            </ol>
+                <div id="interactive">
+                    <p> How many finger are you holding up? (1-5)</p> 
+    
+                    <select id="userInput2">
+                        
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                        
+                    <button id="leButton2">Click me</button>
+                </div>
+           
+
+            
+        </div>  
+            
+
+        <script type="text/javascript">
+
+                // GAME 1
+            
+            document.getElementById("leButton").onclick = function() {
+                
+                // variables
+                // names
+                
+                var myNumber = document.getElementById("userInput").value; // gets user input and add it to a variable
+            
+                var gotIt = false;                                         // because the computer hasn't got it
+                
+                var numberOfGuesses = 1;                                   // the amount of guesses the computer made
+                
+                var wrongGuesses = [];
+                
+                
+                // logic
+                
+                while (gotIt == false) {
+                    
+                    
+                function DoAGuess(correctAnswer) {
+                    
+                    
+                    var computerGuess = Math.random();                     // creating the randomizator
+                        computerGuess = computerGuess * 6;
+                        computerGuess = Math.floor(computerGuess);
+                
+                    if (myNumber > 5) {
+                        
+                        alert("Please choose a number between 0 and 5!");
+                        gotIt = true; // to pause the cicle.
+                        
+                    } else {
+                    
+                    
+                    if (computerGuess == correcAnswer) {
+                    
+                        
+                        
+                        return (true);
+                        alert ("Got it!" + " It was a " + computerGuess + ". It took me " + numberOfGuesses + " guesses!");
+                        
+                    
+                    } else {
+                        
+                        return (false);
+                        numberOfGuesses++; // numGuesses = numGuesses + 1!
+                           
+                        }
+                    
+                   }
+                    
+                }
+            }     
+        }
+            
+            
+            
+                // GAME 2
+            
+            document.getElementById("leButton2").onclick = function() {
+                
+                
+                // variables
+                // names
+                
+                var myNumber2 = document.getElementById("userInput2").value; // gets user input and add it to a variable
+            
+                var gotIt2 = false;                                         // because the computer hasn't got it
+                
+                var numberOfGuesses2 = 1;                                   // the amount of guesses the computer made
+                
+                var wrongGuesses2 = [];
+                
+                
+                // logic
+            
+                while (gotIt2 == false) {
+                    
+                    var computerGuess2 = Math.random();                     // creating the randomizator
+                        computerGuess2 = computerGuess2 * 6;
+                        computerGuess2 = Math.floor(computerGuess2);
+                
+                    if (myNumber2 > 5) {
+                        
+                        alert("Please choose a number between 0 and 5!");
+                        gotIt2 = true; // to pause the cicle.
+                        
+                    } else {
+                    
+                    
+                    if (computerGuess2 == myNumber2) {
+                    
+                        gotIt2 = true;
+                        alert ("Got it!" + " It was a " + computerGuess2 + ". It took me " + numberOfGuesses2 + " guesses!");
+                        
+                    
+                    } else {
+                                        
+                        numberOfGuesses2++; // numGuesses = numGuesses + 1!
+                           
+                    }
+                }
+            }         
+        }
+            
+            
+            
+        </script>
+    
+
+    </body>
+</html>

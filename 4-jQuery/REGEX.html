@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>REGEX</title>
+   
+<script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+
+                  
+    </style>
+    
+</head>
+    
+    <body>
+
+        
+    <p> Regex is AWESOME.<br>
+        Misterious and confusing too!<br>
+        REGEX is used to check if someone entered numbers/letters or anything like that in forms<br>
+        </p>
+   
+        <p></p>
+        <script type="text/javascript">
+
+                //first we define our REGEX
+            
+            var  regex = /is/; // it's used with slashes. 
+            
+            var string = "Regex is great!";
+            
+            
+            // to match these, I use the match function on jQuery (althought it can be used with pure JS)
+            
+            var result = string.match(regex); // uses 1 parameter: the regex expression :) 
+            //what it does is: "does the word (var regex) appear in the string (var string)?
+            
+            alert(result); // doesn't return TRUE OR FALSE. It returns what it finds.
+            // if it doesn't find anything: it returns, null!
+            
+   /*         
+            Regex is case sensitive:
+            /great/ != /Great/
+            
+            To fix that, use the:
+            
+            /great/i -> "case Insenstive search"
+            
+            We can also look for things that appeear on the string more than once:
+            
+            /e/ -> returns "e", because "yes, it appears more than once"
+            
+            if I want to know HOW MANY times it appesar:
+            
+            /e/g -> global flag. Results in a array of "e"
+            */
+            
+            
+            
+        </script>
+    
+    </body>
+</html>

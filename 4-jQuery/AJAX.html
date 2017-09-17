@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>AJAX</title>
+   
+<script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+
+                  
+    </style>
+    
+</head>
+    
+    <body>
+
+           <p> AJAX allows me to get content  from my server within my webpage (for example, a click), and do something <em>without refreshing the page.</em></p> 
+        
+            <p>One slight downside of it, is that <strong> we can't use it on local files.</strong></p>
+            <p>So, AJAX doesn't work on files on your computer.</p>
+            <p> jQuery is not critical for AJAX, but it makes it easier.</p>
+        
+        <p></p>
+        <script type="text/javascript">
+
+            
+            // The following code only works on a live page.
+            
+            $.get("filename.txt", function(data) {
+                
+                alert(data); // alerts the  content of filename.txt
+                
+                
+            }) // gets content from filename. Uses a callback function to do the thing.
+            // uses a variable "data" on the function call.
+            
+            // problems:
+/*            Doesn't give you an option or message if "get" fails. That can happen on mobile if someone loses connection.
+            Other options would be: give a message in case the file doesn't get loaded, or, better yet, just do the action later.
+            
+            */
+            
+            // To fix that:
+            
+            $.ajax("filename.txt")
+                .done(function(data) {
+                
+               $("p").html(data) // challenge. IT'S THAT IZI!
+                //Althought it can be done in easier ways using JS, but this one is more powerful.
+                
+            })
+                .fail(function() {
+                // in case it fails:
+                
+                alert("failed to get data")
+                
+            }); 
+            
+            //"filename.txt" is the url
+            // ".ajax" function is much more powerful
+            
+            //CHALLENGE:
+            // Create a empty paragraph tag and add the data from filename.txt into it.
+            
+            
+            
+            
+        </script>
+    
+    </body>
+</html>

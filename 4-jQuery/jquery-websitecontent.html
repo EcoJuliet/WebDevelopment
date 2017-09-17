@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title> jQuery</title>
+   
+    <script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+    
+          #circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+
+    
+    </style>
+    
+</head>
+    
+<body>
+    <div id="circle"></div>
+  <p> This is some text.</p>
+    
+    <p> There are many functions on jQuery.</p>
+    <p> For instance</p>
+    $("element").hover -> when mouse hovers over it<br>
+    $("element").click -> when mouse clicks on it<br>
+    $("element").html -> gets the HTML property of it.<br>
+    $("element").attr("src", "http://www.ecowebhosting.co.uk/") -> to change an attribute INSIDE the element (for example, an iframe.<br>
+    
+    <iframe src="http://www.cnn.com"></iframe>
+
+    <script type="text/javascript">
+
+        $("#circle").click(function() {
+            
+            $("iframe").attr("src", "http://www.ecowebhosting.co.uk/");
+            
+            
+        });
+            
+        
+        
+        
+    </script>
+    
+</body>
+</html>

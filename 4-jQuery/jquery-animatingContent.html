@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery</title>
+   
+<script src="jquery.min.js"></script>
+    
+    <style type="text/css">
+        #greenCircle {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+        }
+
+        
+
+                  
+    </style>
+    
+</head>
+    
+    <body>
+        
+        <p> To animate an object using jQuery, you must use the<br>
+        $(this).animate({curly brackets for arrays}) function
+        </p>
+            <div id="greenCircle"></div>
+            
+        <script type="text/javascript">
+
+            $("#greenCircle").click(function() {
+                
+                $(this).animate({
+                    width:"100px", 
+                    height:"100px", // can use "toggle!" check the docs to make it appear again
+                    marginLeft: "100px",
+                
+                }, 2000, function() {
+                    
+                    $(this).css("background-color", "red"); // this callback function makes the object turn color.
+                                                            // true animations must be installed with jQuery UI
+                    
+                });
+                
+            });
+            
+        </script>
+    
+    </body>
+</html>

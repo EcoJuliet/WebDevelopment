@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Disappearing Circles</title>
+        <style type="text/css">
+            
+            .circles {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                float: left;
+                margin: 25px;
+                border: 1px dotted black;  
+            }
+            #red {
+                background-color: red;
+            }
+            #yellow {
+                background-color: yellow;
+            }
+            #blue {
+                background-color: blue;
+            }
+            .clear {
+                float: none;
+            }
+            .buttons {
+                position: relative;
+                float:left;
+                top: 150px;
+                left: -500px;
+                margin-left: 100px;
+            }
+        </style>    
+    </head>
+    <body> 
+        <div class="circles" id="red"></div>
+            
+        <div class="circles" id="yellow"></div> 
+            
+        <div class="circles" id="blue"></div>
+            
+        
+        <div class="clear"></div>
+            <button class="buttons" id="redButton">Red</button>
+            <button class="buttons" id="yellowButton">Yellow</button>
+            <button class="buttons" id="blueButton">Blue</button>
+        
+<script type="text/javascript">
+       
+    document.getElementById("red").onclick = function() {
+        document.getElementById("red").style.display = "none";   
+    }
+    document.getElementById("yellow").onclick = function() {
+        document.getElementById("yellow").style.display = "none";   
+    }
+    document.getElementById("blue").onclick = function() {
+        document.getElementById("blue").style.display = "none";   
+    }
+    document.getElementById("redButton").onclick = function() {
+        document.getElementById("red").style.display = "none";
+    }
+    document.getElementById("yellowButton").onclick = function() {
+        document.getElementById("yellow").style.display = "none";
+    }
+    document.getElementById("blueButton").onclick = function() {
+        document.getElementById("blue").style.display = "none";
+    }
+</script>        
+        
+    </body>
+</html>

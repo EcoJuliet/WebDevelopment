@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Loops!</title>
+    
+</head>
+<body>
+    
+    <h1> Testing </h1>
+    <div id="tweetDiv"></div>
+    
+    <script type="text/javascript">
+        
+  
+        /*for ( var i = 5; i > 0; i--)  { 
+        
+            BUGGAalert(i);
+            
+       }*/
+        
+                                /*   EXPLANATION: beginning a variable at 1 = 0, until i is less than 5, add i + i = 1  */
+                                                /*i++ means i + i = 1.
+                                                It's python's equivalent to i+=1
+                                                To make it mean less, use i-- */           
+    
+        
+        
+        var tweets = ["Hi!", "Good morning!", "I like bananas!", "I drive caaaars!", "Sweet dreams!"];
+        var tweetString = "";                        /* create a variable to hold all the tweets; MAKE IT EMPTY*/
+        
+        for (var i = 0; i < tweets.length; i++) {   /*USE variable.LENGHT, BITCH!*/
+            
+            tweetString = tweetString + "<p>" + tweets[i] + "</p>"; /*Add the tweets to the variable, by each iteration*/
+            
+        }
+        
+        document.getElementById("tweetDiv").innerHTML = tweetString; /*Send those added tweets to the Div*/
+        
+        
+        
+    </script>    
+    
+</body>
+    
+    
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<tittle style="color:red; font-size:200%;">CSS3</tittle>
+		<p style="color:#0174DF;font-size:150%;">Positioning</p>
+			<style type="text/css">
+                
+                .dunka {
+                    color:#151515;
+                    background-color: aquamarine;
+                    width: 300px;
+                    position: relative;
+                    left: 100px;
+                    top: 100px;
+                    z-index: 2;
+                }
+                
+                .parta {
+                    color:whitesmoke;
+                    background-color: lightgreen;
+                    width: 300px;
+                    position: relative;
+                    left: 100px;
+                    top: -100px;
+                    z-index: 1;
+                    opacity: 0.8;
+                }
+                
+			</style>
+
+	</head>
+	
+		<body>
+            <div class="dunka">                      
+              <p>Floating might be good, but, what if I don't want my object attached to a side?</p>
+                <p> This little fucker here has somewhat a 200px "invisible border" to the left</p>
+                
+            </div>
+            <div class="parta">
+                 <p> In order to do that, we'll use <em><span style="font-size:200%">POSITIONING!</span></em></p>             <p>FIRST: Add, "POSITIONING:relative" in the style </p>
+                <p> Second, write the comand:<br> "Left: px count" or <br>"Right: px count"</p>
+                <p> It creates an invible border!</p>
+                <p> I can also use <em>top</em>.</p>
+            </div>
+            <div style="color:red">
+                <p>If a divbox overlap another one, I can use the z-index</p>
+                <p>The object(div) that has a higher z-index will appear in the front of the other one.</p>
+            </div>
+            <div>
+                <p>We can set the <strong><em>opacity</em></strong> of an element as well!</p>
+                <p> Opacity ranges from 0 (invisible) to 1 (visible)!</p>
+                <p> Always check the style!</p>
+            </div> 
+		</body>
+</html>
